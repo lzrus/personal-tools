@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fiche projet – Business plan en 8 étapes</title>
+<style>
+:root{--bg:#fff;--mica1:transparent;--mica2:transparent;--surface:#fff;--acrylic:rgba(255,255,255,.72);--ink:#242424;--muted:#616161;--stroke:#e0e0e0;--stroke-strong:#bdbdbd;--field-line:#616161;--hover:#f5f5f5;--press:#e0e0e0;--brand:#0f6cbd;--brand-bg:#0f6cbd;--brand-bg-hover:#115ea3;--brand-bg-press:#0f548c;--on-brand:#fff;--brand-tint:#ebf3fc;--ok:#107c10;--ok-tint:#e7f5e7;--danger:#b10e1c;--shadow:0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.14);--glow:rgba(15,108,189,.13);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1a1a;--mica1:rgba(71,158,245,.14);--mica2:rgba(142,90,220,.12);--surface:#292929;--acrylic:rgba(41,41,41,.72);--ink:#fff;--muted:#d1d1d1;--stroke:#424242;--stroke-strong:#6b6b6b;--field-line:#d1d1d1;--hover:#3d3d3d;--press:#4d4d4d;--brand:#479ef5;--brand-bg:#115ea3;--brand-bg-hover:#0f6cbd;--brand-bg-press:#0c3b5e;--brand-tint:#0b2a45;--ok:#54b054;--ok-tint:#0d2a0d;--danger:#f1707b;--shadow:0 0 2px rgba(0,0,0,.24),0 2px 4px rgba(0,0,0,.28);--glow:rgba(71,158,245,.16);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1a1a1a;--mica1:rgba(71,158,245,.14);--mica2:rgba(142,90,220,.12);--surface:#292929;--acrylic:rgba(41,41,41,.72);--ink:#fff;--muted:#d1d1d1;--stroke:#424242;--stroke-strong:#6b6b6b;--field-line:#d1d1d1;--hover:#3d3d3d;--press:#4d4d4d;--brand:#479ef5;--brand-bg:#115ea3;--brand-bg-hover:#0f6cbd;--brand-bg-press:#0c3b5e;--brand-tint:#0b2a45;--ok:#54b054;--ok-tint:#0d2a0d;--danger:#f1707b;--shadow:0 0 2px rgba(0,0,0,.24),0 2px 4px rgba(0,0,0,.28);--glow:rgba(71,158,245,.16);color-scheme:dark}
+html:root,html:root[data-theme="dark"],html:root[data-theme="light"]{--bg:#fff;--mica1:transparent;--mica2:transparent;--surface:#fff;--acrylic:#fff;--ink:#242424;--muted:#616161;--stroke:#e0e0e0;--stroke-strong:#bdbdbd;--field-line:#616161;--hover:#f5f5f5;--press:#e0e0e0;--brand:#0f6cbd;--brand-bg:#0f6cbd;--brand-bg-hover:#115ea3;--brand-bg-press:#0f548c;--on-brand:#fff;--brand-tint:#ebf3fc;--ok:#107c10;--ok-tint:#e7f5e7;--danger:#b10e1c;--shadow:0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.14);--glow:transparent;color-scheme:light}
+html,body{background-color:#fff}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:15px/1.45 "Segoe UI Variable Text","Segoe UI Variable","Segoe UI",system-ui,-apple-system,sans-serif;
+background-color:var(--bg);background-image:radial-gradient(900px 520px at 6% -6%,var(--mica1),transparent 62%),radial-gradient(760px 520px at 104% 2%,var(--mica2),transparent 60%);background-attachment:fixed}
+.wrap{max-width:1200px;margin:0 auto;padding:32px 16px 56px}
+h1{font:600 clamp(1.7rem,4.6vw,2.15rem)/1.2 "Segoe UI Variable Display","Segoe UI Variable","Segoe UI",system-ui,sans-serif;margin:0 0 6px;letter-spacing:-.01em}
+.lead{margin:0 0 20px;color:var(--muted);max-width:62ch}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+select,input,textarea,button{font:inherit;color:var(--ink)}
+select,.btn{min-height:34px;background:var(--surface);border:1px solid var(--stroke-strong);border-radius:4px;padding:5px 12px;cursor:pointer;font-weight:600;transition:background .12s,border-color .12s}
+select{font-weight:400;max-width:100%}
+select:hover,.btn:hover{background:var(--hover)}
+.btn:active{background:var(--press)}
+.btn.main{background:var(--brand-bg);border-color:transparent;color:var(--on-brand)}
+.btn.main:hover{background:var(--brand-bg-hover)}
+.btn.main:active{background:var(--brand-bg-press)}
+.btn.warn{color:var(--danger)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+input:focus-visible,textarea:focus-visible{outline:none}
+.card,.head,.sec{position:relative;background:var(--surface);border:1px solid var(--stroke);border-radius:8px;box-shadow:var(--shadow)}
+.head,.sec{overflow:hidden}
+.head::before,.sec::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .2s;background:radial-gradient(220px circle at var(--x,50%) var(--y,50%),var(--glow),transparent 70%)}
+.head>*,.sec>*{position:relative}
+.head{background:var(--acrylic);-webkit-backdrop-filter:blur(30px) saturate(1.25);backdrop-filter:blur(30px) saturate(1.25);padding:18px;margin-bottom:18px}
+.row{display:grid;grid-template-columns:1fr 160px;gap:12px}
+#pcur{width:100%}
+@media (max-width:520px){.row{grid-template-columns:1fr}}
+label{display:block;font-size:.88rem;font-weight:600;margin:0 0 4px}
+input,textarea{width:100%;background:var(--surface);border:1px solid var(--stroke-strong);border-bottom-color:var(--field-line);border-radius:4px;padding:7px 10px;transition:border-color .12s,box-shadow .12s}
+input:hover,textarea:hover{border-color:var(--field-line)}
+input:focus,textarea:focus{border-color:var(--brand);box-shadow:inset 0 -2px 0 var(--brand)}
+textarea{resize:vertical;min-height:72px}
+.prog{margin-top:16px}
+.prog b{font-weight:600;font-size:.9rem}
+.track{height:4px;background:var(--stroke);border-radius:2px;overflow:hidden;margin-top:8px}
+.fill{height:100%;width:0;background:var(--brand);border-radius:2px;transition:width .35s cubic-bezier(.33,0,.67,1)}
+#secs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;align-items:stretch;margin-bottom:16px}
+.sec{grid-column:span 2;min-width:0;padding:16px;border-top:3px solid var(--brand)}
+#s6,#s7{grid-column:span 3}
+.sec.done{border-top-color:var(--ok)}
+@media (max-width:980px){#secs{grid-template-columns:repeat(2,minmax(0,1fr))}.sec,#s6,#s7{grid-column:auto}}
+@media (max-width:640px){#secs{grid-template-columns:1fr}}
+@media (max-width:520px){.sec{grid-template-columns:1fr;gap:10px}}
+.sec>.num{position:absolute;top:16px;left:16px}
+.num{width:32px;height:32px;border-radius:50%;background:var(--brand-tint);color:var(--brand);display:grid;place-items:center;font-weight:600;font-size:1.05rem;border:1px solid var(--brand)}
+.sec.done .num{background:var(--ok);border-color:var(--ok);color:#fff}
+.sec h2{margin:0 0 4px;padding-left:44px;font:600 1.05rem/2 "Segoe UI Variable Display","Segoe UI Variable","Segoe UI",system-ui,sans-serif}
+.sec .q{margin:0 0 12px;color:var(--muted);font-size:.92rem}
+.f{margin-bottom:12px}
+.count{float:right;font-size:.78rem;font-weight:600;line-height:1;padding:5px 9px;border-radius:10px;background:var(--brand-tint);color:var(--brand);margin-top:3px}
+.sec.done .count{background:var(--ok-tint);color:var(--ok)}
+.calc{background:var(--brand-tint);border:1px solid var(--stroke);border-left:3px solid var(--brand);border-radius:4px;padding:10px 12px;font-weight:600;font-size:1.05rem}
+.calc small{display:block;font-weight:400;color:var(--muted);font-size:.85rem}
+.sectsel{width:100%}
+.adder{display:flex;gap:8px;margin-top:8px}
+.adder input{flex:1}
+.btn.small{margin-top:8px;min-height:28px;padding:2px 10px;font-weight:400}
+[hidden]{display:none!important}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.chip{position:relative;background:var(--brand-tint);border:1px solid var(--brand);color:var(--brand);border-radius:16px;padding:4px 16px;font-weight:600;font-size:.9rem}
+.chip .x{position:absolute;top:-8px;right:-6px;width:18px;height:18px;border-radius:50%;border:1px solid var(--stroke-strong);background:var(--surface);color:var(--danger);font-size:14px;line-height:1;padding:0;cursor:pointer;display:grid;place-items:center}
+.chip .x:hover{background:var(--hover)}
+.opts{gap:10px;margin-top:4px;padding-top:6px}
+.optw{position:relative;display:inline-block}
+.opt{background:var(--surface);border:1px solid var(--stroke-strong);color:var(--ink);border-radius:16px;padding:4px 14px;font-size:.9rem;font-weight:400;cursor:pointer;min-height:30px}
+.opt:hover{background:var(--hover)}
+.optw.on .opt{background:var(--brand-tint);border-color:var(--brand);color:var(--brand);font-weight:600}
+.optw.on .opt::before{content:"✓ "}
+.optw .x{position:absolute;top:-8px;right:-6px;width:18px;height:18px;border-radius:50%;border:1px solid var(--stroke-strong);background:var(--surface);color:var(--danger);font-size:14px;line-height:1;padding:0;cursor:pointer;display:grid;place-items:center}
+.optw .x:hover{background:var(--hover)}
+.tot{margin-top:10px;font-weight:600;font-size:.9rem}
+#doc{background:#fff;color:#1f1f1f;border:1px solid var(--stroke);border-radius:8px;box-shadow:var(--shadow);padding:44px 52px;max-width:860px;margin:0 auto 16px;font-family:Georgia,"Times New Roman",serif;line-height:1.65;font-size:15px}
+#doc h1{font:700 2rem/1.2 "Segoe UI",system-ui,sans-serif;margin:0 0 6px;letter-spacing:-.01em}
+#doc .dsub{color:var(--muted);font-family:"Segoe UI",system-ui,sans-serif;font-size:.92rem;margin:0 0 4px}
+#doc h2{font:600 1.25rem/1.3 "Segoe UI",system-ui,sans-serif;color:var(--brand);margin:30px 0 12px;break-after:avoid}
+#doc h3{font:600 .78rem/1.3 "Segoe UI",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:14px 0 3px;break-after:avoid}
+#doc p{margin:0 0 8px;white-space:pre-wrap}
+#doc ul{margin:0 0 8px;padding-left:22px}
+#doc .todo{color:var(--muted);font-style:italic}
+#doc .dres{font-family:"Segoe UI",system-ui,sans-serif;font-weight:600;background:var(--brand-tint);border-left:3px solid var(--brand);padding:8px 12px;margin-top:10px}
+#doc table{border-collapse:collapse;width:100%;font:.88rem/1.4 "Segoe UI",system-ui,sans-serif;margin:4px 0 10px;break-inside:avoid}
+#doc th,#doc td{border:1px solid var(--stroke-strong);padding:6px 10px;text-align:left}
+#doc th{background:none;font-weight:600}
+#doc td.r,#doc th.r{text-align:right}
+#doc tr.tot td{font-weight:600;background:none}
+#doc .dname{font:600 1.35rem/1.3 "Segoe UI",system-ui,sans-serif;margin:0 0 6px;color:var(--brand);white-space:normal}
+#doc .kf{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:16px 0 0;font-family:"Segoe UI",system-ui,sans-serif}
+#doc .kf div{border:1px solid var(--stroke);border-top:3px solid var(--brand);border-radius:6px;padding:8px 10px;font-weight:600}
+#doc .kf small{display:block;font-weight:400;color:var(--muted);font-size:.78rem}
+@page doc{size:A4 portrait;margin:14mm}
+.note{color:var(--muted);font-size:.85rem;margin-top:18px}
+.msg{font-size:.88rem;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@page{size:A4 portrait;margin:14mm}
+@media print{
+ *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ :root{padding:0}
+ body{background:#fff;font-size:12px}
+ .wrap{max-width:none;padding:0}
+ h1{font-size:1.5rem;margin-bottom:8px}
+ .bar,.note,.msg,.adder,.btn.small,.chip .x,.optw .x,.optw:not(.on),.tabs,.addrow,.xr,.mact{display:none!important}
+ .head{backdrop-filter:none;-webkit-backdrop-filter:none;margin-bottom:10px;padding:12px}
+ .head,.sec,.mc{break-inside:avoid;box-shadow:none}
+ .head::before,.sec::before{display:none}
+ #secs{gap:8px}
+ .sec{padding:12px}
+ textarea{resize:none;overflow:visible}
+ .mt{min-width:0;font-size:.72rem}
+ .mt td input{border:0;padding:0;min-width:0;background:none}
+ .scroll{overflow:visible}
+ body.pdoc .wrap>*{display:none!important}
+ body.pdoc .wrap>#doc{display:block!important}
+ #doc{page:doc;border:0;box-shadow:none;padding:0;max-width:none;font-size:12px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Fiche projet</h1>
+
+<div class="bar">
+ <select id="sel" aria-label="Choisir un projet"></select>
+ <button class="btn" id="new">Nouveau projet</button>
+ <button class="btn warn" id="del">Supprimer</button>
+</div>
+
+<div class="head">
+ <div class="row">
+  <div><label for="pname">Nom du projet</label><input id="pname" placeholder="Ex. : Boulangerie Les Délices"></div>
+  <div><label for="pcur">Devise</label><select id="pcur"><option value="FCFA">FCFA</option><option value="$">Dollar ($)</option><option value="€">Euro (€)</option></select></div>
+ </div>
+ <div class="prog"><b id="ptxt">0 % complété</b><div class="track"><div class="fill" id="pfill"></div></div></div>
+</div>
+
+<div id="secs"></div>
+<div id="doc" hidden></div>
+
+<div class="bar">
+ <button class="btn main" id="print">Imprimer / enregistrer en PDF</button>
+ <button class="btn" id="copy">Copier le texte</button>
+ <span class="msg" id="msg" role="status"></span>
+</div>
+<p class="note">Vos réponses sont enregistrées dans ce navigateur, sur cet appareil uniquement. Pour les conserver ailleurs, copiez le texte ou enregistrez la fiche en PDF.</p>
+</div>
+
+<script>
+var S=[
+{t:"Présentation du projet",q:"Qui êtes-vous et que lancez-vous ?",f:[
+ {k:"desc",l:"Description du projet",a:1},
+ {k:"sect",l:"Secteur d’activité",s:1},
+ {k:"lieu",l:"Lieu d’implantation",pl:1},
+ {k:"team",l:"Équipe porteuse et rôles",tm:1}]},
+{t:"Problèmes et opportunités",q:"Quel besoin non satisfait avez-vous repéré ?",f:[
+ {k:"prob",l:"Problème à résoudre",a:1},
+ {k:"opp",l:"Opportunité que vous saisissez",a:1}]},
+{t:"Marché cible",q:"À qui s’adresse votre offre ?",f:[
+ {k:"cli",l:"Profil de vos clients types",pl:1,ph:"Ex. : Étudiants, Commerçants, Familles"},
+ {k:"taille",l:"Taille estimée du marché (clients, volume ou valeur)"},
+ {k:"ou",l:"Où et comment les atteindre",ch:1}]},
+{t:"Produits et services",q:"Que vendez-vous, et à quel prix ?",f:[
+ {k:"offre",l:"Offre principale",a:1},
+ {k:"prix",l:"Prix de vente"}]},
+{t:"Stratégies de croissance",q:"Comment allez-vous grandir ?",f:[
+ {k:"acq",l:"Acquisition de clients",a:1},
+ {k:"part",l:"Partenariats et canaux de vente",pl:1,ph:"Ex. : Grossiste, Supermarché, Livreur…"},
+ {k:"obj",l:"Objectifs à 12 mois",pl:1,ph:"Ex. : 50 clients réguliers, une 2e boutique…"}]},
+{t:"Avantages concurrentiels",q:"Pourquoi vous plutôt qu’un autre ?",f:[
+ {k:"conc",l:"Principaux concurrents",pl:1,ph:"Ex. : nom d’un concurrent, puis Ajouter"},
+ {k:"diff",l:"Ce qui vous distingue",a:1}]},
+{t:"Projections financières",q:"Que peut rapporter le projet la première année ?",f:[
+ {k:"ca",l:"Chiffre d’affaires prévu (par an)",ct:1,ph:"Ex. : Ventes de produits, Prestations",tl:"Total du chiffre d’affaires",lg:"Chiffre d’affaires total"},
+ {k:"ch",l:"Charges prévues (par an)",ct:1,ph:"Ex. : Loyer, Salaires, Électricité",tl:"Total des charges",lg:"Charges totales"}],calc:{id:"c7",l:"Résultat prévu",f:function(d){return sumC(d.ca)-sumC(d.ch)},need:["ca","ch"]}},
+{t:"Besoin en financement",q:"De quelle somme avez-vous besoin pour démarrer ?",f:[
+ {k:"bes",l:"Besoin total de démarrage",n:1},
+ {k:"app",l:"Apport personnel",n:1},
+ {k:"use",l:"Utilisation prévue des fonds",ct:1,ph:"Ex. : Équipements, Stock de départ",tl:"Total des fonds utilisés",lg:"Utilisation des fonds"}],calc:{id:"c8",l:"Financement à rechercher",f:function(d){return num(d.bes)-num(d.app)},need:["bes","app"]}}
+];
+var st={cur:"p1",custom:[],list:[{id:"p1",name:"",cur:"FCFA",d:{}}]};
+var SECT=["Agriculture et élevage","Pêche et aquaculture","Agroalimentaire et transformation","Restauration et boulangerie","Commerce de détail","Commerce de gros et import-export","Artisanat","BTP et immobilier","Transport et logistique","Énergie et énergies renouvelables","Santé et pharmacie","Éducation et formation","Numérique et technologies","Télécommunications et mobile money","Tourisme et hôtellerie","Beauté et bien-être","Mode et textile","Médias et communication","Services aux entreprises","Services à la personne","Environnement et recyclage","Culture, arts et loisirs"];
+function num(v){var x=parseFloat(String(v==null?"":v).replace(/\s/g,"").replace(",","."));return isNaN(x)?0:x}
+function fmt(x){return x.toLocaleString("fr-FR")}
+function load(){try{var r=localStorage.getItem("fiche-projets-bp");if(r){var o=JSON.parse(r);if(o&&o.list&&o.list.length){st=o;if(!Array.isArray(st.custom))st.custom=[];if(!Array.isArray(st.canaux))st.canaux=[]}}}catch(e){}}
+function save(){try{localStorage.setItem("fiche-projets-bp",JSON.stringify(st))}catch(e){}}
+function proj(){for(var i=0;i<st.list.length;i++)if(st.list[i].id===st.cur)return st.list[i];return st.list[0]}
+function $(id){return document.getElementById(id)}
+
+function build(){
+ var p=proj(),box=$("secs");box.innerHTML="";
+ S.forEach(function(s,i){
+  var sec=document.createElement("section");sec.className="sec";sec.id="s"+i;
+  var num_=document.createElement("div");num_.className="num";num_.textContent=i+1;
+  var body=document.createElement("div");
+  var h=document.createElement("h2");h.innerHTML='<span class="count" id="n'+i+'"></span>';h.appendChild(document.createTextNode(s.t));
+  var q=document.createElement("p");q.className="q";q.textContent=s.q;
+  body.appendChild(h);body.appendChild(q);
+  s.f.forEach(function(f){
+   var w=document.createElement("div");w.className="f";
+   var lb=document.createElement("label");lb.textContent=f.l;lb.htmlFor="f_"+f.k;
+   if(f.s){w.appendChild(lb);w.appendChild(sectWidget(p,f));body.appendChild(w);return}
+   if(f.pl){w.appendChild(lb);w.appendChild(placeWidget(p,f));body.appendChild(w);return}
+   if(f.ch){w.appendChild(lb);w.appendChild(chanWidget(p,f));body.appendChild(w);return}
+   if(f.tm){w.appendChild(lb);w.appendChild(teamWidget(p,f));body.appendChild(w);return}
+   if(f.ct){w.appendChild(lb);w.appendChild(chargeWidget(p,f));body.appendChild(w);return}
+   var el=document.createElement(f.a?"textarea":"input");el.id="f_"+f.k;
+   if(f.n){el.type="text";el.inputMode="decimal"}
+   el.value=p.d[f.k]||"";
+   el.addEventListener("input",function(){p.d[f.k]=el.value;save();refresh()});
+   w.appendChild(lb);w.appendChild(el);body.appendChild(w);
+  });
+  if(s.calc){var c=document.createElement("div");c.className="calc";c.id=s.calc.id;body.appendChild(c)}
+  sec.appendChild(num_);sec.appendChild(body);box.appendChild(sec);
+ });
+ $("pname").value=p.name||"";var cs=$("pcur"),cv=p.cur||"FCFA";if(!p.cur)p.cur=cv;if(!Array.prototype.some.call(cs.options,function(o){return o.value===cv})){var o2=document.createElement("option");o2.value=cv;o2.textContent=cv;cs.appendChild(o2)}cs.value=cv;
+ refresh();buildDoc();
+}
+
+function fillSect(sl,val){
+ sl.innerHTML="";
+ function opt(par,v,t){var o=document.createElement("option");o.value=v;o.textContent=t||v;par.appendChild(o)}
+ opt(sl,"","— Choisir un secteur —");
+ var g1=document.createElement("optgroup");g1.label="Secteurs proposés";SECT.forEach(function(x){opt(g1,x)});sl.appendChild(g1);
+ if(st.custom.length){var g2=document.createElement("optgroup");g2.label="Mes secteurs";st.custom.forEach(function(x){opt(g2,x)});sl.appendChild(g2)}
+ if(val&&SECT.indexOf(val)<0&&st.custom.indexOf(val)<0){var g3=document.createElement("optgroup");g3.label="Saisi précédemment";opt(g3,val);sl.appendChild(g3)}
+ sl.value=val||"";
+}
+function sectWidget(p,f){
+ var box=document.createElement("div");
+ var sl=document.createElement("select");sl.id="f_"+f.k;sl.className="sectsel";
+ var rm=document.createElement("button");rm.type="button";rm.className="btn warn small";rm.textContent="Retirer de ma liste";
+ function sync(){rm.hidden=st.custom.indexOf(sl.value)<0}
+ fillSect(sl,p.d[f.k]||"");sync();
+ sl.addEventListener("change",function(){p.d[f.k]=sl.value;save();refresh();sync()});
+ rm.addEventListener("click",function(){
+  var v=sl.value;st.custom=st.custom.filter(function(x){return x!==v});
+  p.d[f.k]="";save();fillSect(sl,"");sync();refresh();say("Secteur retiré de votre liste.");
+ });
+ var add=document.createElement("div");add.className="adder";
+ var inp=document.createElement("input");inp.id="newsect";inp.placeholder="Votre secteur n’est pas dans la liste ? Ajoutez-le ici";inp.setAttribute("aria-label","Ajouter un secteur d’activité");
+ var bt=document.createElement("button");bt.type="button";bt.className="btn";bt.textContent="Ajouter";
+ function doAdd(){
+  var n=inp.value.trim().replace(/\s+/g," ");if(!n)return;
+  var all=SECT.concat(st.custom),hit=null;
+  all.forEach(function(x){if(x.toLowerCase()===n.toLowerCase())hit=x});
+  if(!hit){st.custom.push(n);hit=n}
+  p.d[f.k]=hit;save();fillSect(sl,hit);sync();inp.value="";refresh();say("Secteur « "+hit+" » sélectionné.");
+ }
+ bt.addEventListener("click",doAdd);
+ inp.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();doAdd()}});
+ add.appendChild(inp);add.appendChild(bt);
+ box.appendChild(sl);box.appendChild(add);box.appendChild(rm);
+ return box;
+}
+function placeWidget(p,f){
+ var box=document.createElement("div"),v=p.d[f.k];
+ if(!Array.isArray(v))p.d[f.k]=v&&String(v).trim()?[String(v).trim()]:[];
+ var add=document.createElement("div");add.className="adder";add.style.marginTop="0";
+ var inp=document.createElement("input");inp.id="f_"+f.k;inp.placeholder=f.ph||"Ex. : Brazzaville, Poto-Poto";
+ var bt=document.createElement("button");bt.type="button";bt.className="btn";bt.textContent="Ajouter";
+ var chips=document.createElement("div");chips.className="chips";
+ function draw(){
+  chips.innerHTML="";
+  p.d[f.k].forEach(function(x,i){
+   var c=document.createElement("span");c.className="chip";c.appendChild(document.createTextNode(x));
+   var b=document.createElement("button");b.type="button";b.className="x";b.textContent="×";b.setAttribute("aria-label","Supprimer "+x);
+   b.addEventListener("click",function(){p.d[f.k].splice(i,1);save();draw();refresh()});
+   c.appendChild(b);chips.appendChild(c);
+  });
+ }
+ function doAdd(){
+  var n=inp.value.trim().replace(/\s+/g," ");if(!n)return;
+  var dup=p.d[f.k].some(function(x){return x.toLowerCase()===n.toLowerCase()});
+  if(!dup){p.d[f.k].push(n);save()}
+  inp.value="";draw();refresh();inp.focus();
+ }
+ bt.addEventListener("click",doAdd);
+ inp.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();doAdd()}});
+ add.appendChild(inp);add.appendChild(bt);box.appendChild(add);box.appendChild(chips);draw();
+ return box;
+}
+var CANAUX=["Boutique physique","Marché","Bouche-à-oreille","WhatsApp","Facebook / Instagram","TikTok","Site web","Livraison à domicile","Revendeurs et grossistes","Radio et affichage","Démarchage direct","Partenariats"];
+function chanWidget(p,f){
+ if(!Array.isArray(st.canaux))st.canaux=[];
+ var v=p.d[f.k];
+ if(!Array.isArray(v))p.d[f.k]=v&&String(v).trim()?[String(v).trim()]:[];
+ var box=document.createElement("div"),chips=document.createElement("div");chips.className="chips opts";
+ function all(){var a=CANAUX.concat(st.canaux);p.d[f.k].forEach(function(x){if(a.indexOf(x)<0)a.push(x)});return a}
+ function draw(){
+  chips.innerHTML="";
+  all().forEach(function(n){
+   var on=p.d[f.k].indexOf(n)>=0;
+   var w=document.createElement("span");w.className="optw"+(on?" on":"");
+   var b=document.createElement("button");b.type="button";b.className="opt";b.textContent=n;b.setAttribute("aria-pressed",on?"true":"false");
+   b.addEventListener("click",function(){
+    var i=p.d[f.k].indexOf(n);
+    if(i>=0)p.d[f.k].splice(i,1);else p.d[f.k].push(n);
+    save();draw();refresh();
+   });
+   w.appendChild(b);
+   if(st.canaux.indexOf(n)>=0){
+    var x=document.createElement("button");x.type="button";x.className="x";x.textContent="×";x.setAttribute("aria-label","Retirer "+n+" de ma liste");
+    x.addEventListener("click",function(){
+     st.canaux=st.canaux.filter(function(c){return c!==n});
+     var j=p.d[f.k].indexOf(n);if(j>=0)p.d[f.k].splice(j,1);
+     save();draw();refresh();
+    });
+    w.appendChild(x);
+   }
+   chips.appendChild(w);
+  });
+ }
+ var add=document.createElement("div");add.className="adder";add.style.marginTop="14px";
+ var inp=document.createElement("input");inp.id="f_"+f.k;inp.placeholder="Un autre canal ? Ex. : Marché de Total, Eglise, École…";inp.setAttribute("aria-label","Ajouter un canal");
+ var bt=document.createElement("button");bt.type="button";bt.className="btn";bt.textContent="Ajouter";
+ function doAdd(){
+  var n=inp.value.trim().replace(/\s+/g," ");if(!n)return;
+  var hit=null;all().forEach(function(x){if(x.toLowerCase()===n.toLowerCase())hit=x});
+  if(!hit){st.canaux.push(n);hit=n}
+  if(p.d[f.k].indexOf(hit)<0)p.d[f.k].push(hit);
+  save();inp.value="";draw();refresh();inp.focus();
+ }
+ bt.addEventListener("click",doAdd);
+ inp.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();doAdd()}});
+ add.appendChild(inp);add.appendChild(bt);
+ box.appendChild(chips);box.appendChild(add);draw();
+ return box;
+}
+function teamWidget(p,f){
+ var v=p.d[f.k];
+ if(!Array.isArray(v))p.d[f.k]=v&&String(v).trim()?[{n:String(v).trim(),r:""}]:[];
+ var box=document.createElement("div"),chips=document.createElement("div");chips.className="chips";
+ var add=document.createElement("div");add.className="adder";add.style.marginTop="0";add.style.flexWrap="wrap";
+ var inp=document.createElement("input");inp.id="f_"+f.k;inp.placeholder="Nom ou prénom";inp.style.minWidth="150px";
+ var ro=document.createElement("input");ro.placeholder="Rôle (ex. : Gérant)";ro.setAttribute("aria-label","Rôle");ro.style.flex="0 0 190px";ro.style.width="190px";
+ var bt=document.createElement("button");bt.type="button";bt.className="btn";bt.textContent="Ajouter";
+ function draw(){
+  chips.innerHTML="";
+  p.d[f.k].forEach(function(x,i){
+   var c=document.createElement("span");c.className="chip";c.appendChild(document.createTextNode(x.n+(x.r?" · "+x.r:"")));
+   var b=document.createElement("button");b.type="button";b.className="x";b.textContent="×";b.setAttribute("aria-label","Supprimer "+x.n);
+   b.addEventListener("click",function(){p.d[f.k].splice(i,1);save();draw();refresh()});
+   c.appendChild(b);chips.appendChild(c);
+  });
+ }
+ function doAdd(){
+  var n=inp.value.trim().replace(/\s+/g," ");if(!n){inp.focus();return}
+  var r=ro.value.trim().replace(/\s+/g," "),hit=null;
+  p.d[f.k].forEach(function(x){if(x.n.toLowerCase()===n.toLowerCase())hit=x});
+  if(hit)hit.r=r;else p.d[f.k].push({n:n,r:r});
+  save();inp.value="";ro.value="";draw();refresh();inp.focus();
+ }
+ bt.addEventListener("click",doAdd);
+ [inp,ro].forEach(function(el){el.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();doAdd()}})});
+ add.appendChild(inp);add.appendChild(ro);add.appendChild(bt);
+ box.appendChild(add);box.appendChild(chips);draw();
+ return box;
+}
+function sumC(v){if(Array.isArray(v))return v.reduce(function(s,x){return s+num(x&&x.a)},0);return num(v)}
+function chargeWidget(p,f){
+ var v=p.d[f.k];
+ if(!Array.isArray(v))p.d[f.k]=v&&String(v).trim()?[{n:(f.lg||"Charges totales"),a:num(v)}]:[];
+ var box=document.createElement("div"),chips=document.createElement("div");chips.className="chips";
+ var add=document.createElement("div");add.className="adder";add.style.marginTop="0";add.style.flexWrap="wrap";
+ var inp=document.createElement("input");inp.id="f_"+f.k;inp.placeholder=f.ph||"Ex. : Loyer, Salaires, Électricité";inp.style.minWidth="150px";
+ var am=document.createElement("input");am.type="text";am.inputMode="decimal";am.placeholder="Montant par an";am.setAttribute("aria-label","Montant par an");am.style.flex="0 0 150px";am.style.width="150px";
+ var bt=document.createElement("button");bt.type="button";bt.className="btn";bt.textContent="Ajouter";
+ var tt=document.createElement("div");tt.className="tot";tt.id="tot_"+f.k;tt.setAttribute("data-tl",f.tl||"Total des charges");
+ function draw(){
+  chips.innerHTML="";
+  p.d[f.k].forEach(function(x,i){
+   var c=document.createElement("span");c.className="chip";c.appendChild(document.createTextNode(x.n+" · "+fmt(num(x.a))));
+   var b=document.createElement("button");b.type="button";b.className="x";b.textContent="×";b.setAttribute("aria-label","Supprimer "+x.n);
+   b.addEventListener("click",function(){p.d[f.k].splice(i,1);save();draw();refresh()});
+   c.appendChild(b);chips.appendChild(c);
+  });
+ }
+ function doAdd(){
+  var n=inp.value.trim().replace(/\s+/g," ");if(!n){inp.focus();return}
+  var a=num(am.value),hit=null;
+  p.d[f.k].forEach(function(x){if(x.n.toLowerCase()===n.toLowerCase())hit=x});
+  if(hit)hit.a=a;else p.d[f.k].push({n:n,a:a});
+  save();inp.value="";am.value="";draw();refresh();inp.focus();
+ }
+ bt.addEventListener("click",doAdd);
+ [inp,am].forEach(function(el){el.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();doAdd()}})});
+ add.appendChild(inp);add.appendChild(am);add.appendChild(bt);
+ box.appendChild(add);box.appendChild(chips);box.appendChild(tt);draw();
+ return box;
+}
+function valTxt(v,c){return Array.isArray(v)?v.map(function(x){return typeof x==="object"&&x?(x.r!==undefined?x.n+(x.r?" ("+x.r+")":""):x.n+" ("+fmt(num(x.a))+" "+(c||"")+")"):x}).join(", "):String(v||"").trim()}
+function filled(p,f){return valTxt(p.d[f.k])!==""}
+function refresh(){
+ var p=proj(),tot=0,ok=0;
+ ["ca","ch","use"].forEach(function(k){var te=$("tot_"+k);if(te)te.textContent=Array.isArray(p.d[k])&&p.d[k].length?te.getAttribute("data-tl")+" : "+fmt(sumC(p.d[k]))+" "+(p.cur||""):""});
+ S.forEach(function(s,i){
+  var n=0;s.f.forEach(function(f){tot++;if(filled(p,f)){n++;ok++}});
+  $("s"+i).className="sec"+(n===s.f.length?" done":"");
+  $("n"+i).textContent=n===s.f.length?"✓ complet":n+"/"+s.f.length;
+  if(s.calc){
+   var shown=s.calc.need.some(function(k){return String(p.d[k]||"").trim()!==""});
+   var v=s.calc.f(p.d),cur=p.cur||"";
+   $(s.calc.id).innerHTML=shown?"<small>"+s.calc.l+"</small>"+fmt(v)+" "+esc(cur)+(v<0?" (déficit)":""):"<small>"+s.calc.l+"</small>Calculé automatiquement dès que vous saisissez les montants.";
+  }
+ });
+ var pc=Math.round(ok/tot*100);
+ $("ptxt").textContent=pc+" % complété ("+ok+" champs sur "+tot+")";
+ $("pfill").style.width=pc+"%";
+ fillSel();
+}
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+function fillSel(){
+ var sel=$("sel");sel.innerHTML="";
+ st.list.forEach(function(p,i){var o=document.createElement("option");o.value=p.id;o.textContent=p.name&&p.name.trim()?p.name:"Projet sans nom "+(i+1);if(p.id===st.cur)o.selected=true;sel.appendChild(o)});
+}
+function mk(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
+function dtable(heads,rows,foot,rc){
+ var t=mk("table"),th=mk("thead"),hr=mk("tr");
+ heads.forEach(function(h,i){var c=mk("th",rc.indexOf(i)>=0?"r":"",h);hr.appendChild(c)});
+ th.appendChild(hr);t.appendChild(th);var tb=mk("tbody");
+ rows.forEach(function(r){var tr=mk("tr");r.forEach(function(x,i){tr.appendChild(mk("td",rc.indexOf(i)>=0?"r":"",x))});tb.appendChild(tr)});
+ if(foot){var tr=mk("tr","tot");foot.forEach(function(x,i){tr.appendChild(mk("td",rc.indexOf(i)>=0?"r":"",x))});tb.appendChild(tr)}
+ t.appendChild(tb);return t;
+}
+function buildDoc(){
+ var p=proj(),d=p.d,cur=p.cur||"",box=$("doc");box.innerHTML="";
+ box.appendChild(mk("h1","","Business plan"));
+ if(p.name&&p.name.trim())box.appendChild(mk("p","dname",p.name.trim()));
+ var sub=[(typeof d.sect==="string"?d.sect:""),valTxt(d.lieu)].filter(function(x){return x&&String(x).trim()}).join(" · ");
+ if(sub)box.appendChild(mk("p","dsub",sub));
+ box.appendChild(mk("p","dsub","Document établi le "+new Date().toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"})));
+ var ca=sumC(d.ca),ch=sumC(d.ch),bes=num(d.bes),app=num(d.app);
+ if(ca||ch||bes||app){
+  var kf=mk("div","kf");
+  [["Chiffre d’affaires prévu",ca],["Charges prévues",ch],["Résultat prévu",ca-ch],["Besoin de démarrage",bes],["Apport personnel",app],["Financement à rechercher",bes-app]].forEach(function(o){
+   var c=mk("div");c.appendChild(mk("small","",o[0]));c.appendChild(document.createTextNode(fmt(o[1])+" "+cur));kf.appendChild(c);
+  });
+  box.appendChild(kf);
+ }
+ S.forEach(function(s,i){
+  box.appendChild(mk("h2","",(i+1)+". "+s.t));
+  s.f.forEach(function(f){
+   box.appendChild(mk("h3","",f.l));
+   var v=d[f.k];
+   if(Array.isArray(v)){
+    if(!v.length){box.appendChild(mk("p","todo","À compléter"));return}
+    if(typeof v[0]==="object"){
+     if(v[0].r!==undefined){var ul=mk("ul");v.forEach(function(x){ul.appendChild(mk("li","",x.n+(x.r?" ("+x.r+")":"")))});box.appendChild(ul)}
+     else{box.appendChild(dtable(["Poste","Montant ("+cur+")"],v.map(function(x){return[x.n,fmt(num(x.a))]}),["Total",fmt(sumC(v))],[1]))}
+    }else{var ul2=mk("ul");v.forEach(function(x){ul2.appendChild(mk("li","",x))});box.appendChild(ul2)}
+   }else{
+    var t=String(v||"").trim();
+    if(!t)box.appendChild(mk("p","todo","À compléter"));
+    else box.appendChild(mk("p","",f.n?fmt(num(t))+" "+cur:t));
+   }
+  });
+  if(s.calc)box.appendChild(mk("p","dres",s.calc.l+" : "+fmt(s.calc.f(d))+" "+cur));
+ });
+ 
+}
+function toText(){
+ var p=proj(),t="FICHE PROJET : "+(p.name||"Sans nom")+"\n\n";
+ S.forEach(function(s,i){
+  t+=(i+1)+". "+s.t+"\n";
+  s.f.forEach(function(f){t+="- "+f.l+" : "+(valTxt(p.d[f.k],p.cur)||"(à compléter)")+(f.n&&p.d[f.k]?" "+(p.cur||""):"")+"\n"});
+  if(s.calc)t+="- "+s.calc.l+" : "+fmt(s.calc.f(p.d))+" "+(p.cur||"")+"\n";
+  t+="\n";
+ });
+ return t;
+}
+function say(m){$("msg").textContent=m;setTimeout(function(){$("msg").textContent=""},3500)}
+
+$("pname").addEventListener("input",function(e){proj().name=e.target.value;save();fillSel()});
+$("pcur").addEventListener("input",function(e){proj().cur=e.target.value;save();refresh()});
+$("sel").addEventListener("change",function(e){st.cur=e.target.value;save();build();$("del").textContent="Supprimer"});
+$("new").addEventListener("click",function(){var id="p"+Date.now();st.list.push({id:id,name:"",cur:proj().cur||"FCFA",d:{}});st.cur=id;save();build();$("pname").focus()});
+var armed=false;
+$("del").addEventListener("click",function(){
+ var b=$("del");
+ if(!armed){armed=true;b.textContent="Confirmer la suppression ?";setTimeout(function(){armed=false;b.textContent="Supprimer"},3000);return}
+ armed=false;b.textContent="Supprimer";
+ st.list=st.list.filter(function(p){return p.id!==st.cur});
+ if(!st.list.length)st.list=[{id:"p"+Date.now(),name:"",cur:"FCFA",d:{}}];
+ st.cur=st.list[0].id;save();build();
+});
+function fitAll(){document.querySelectorAll("textarea").forEach(function(t){t.style.height="auto";t.style.height=t.scrollHeight+"px"})}
+function unfit(){document.querySelectorAll("textarea").forEach(function(t){t.style.height=""})}
+function prepPrint(){buildDoc();$("doc").hidden=false;document.body.classList.add("pdoc")}
+function endPrint(){$("doc").hidden=true;document.body.classList.remove("pdoc")}
+window.addEventListener("beforeprint",prepPrint);window.addEventListener("afterprint",endPrint);
+$("print").addEventListener("click",function(){try{prepPrint();window.print();setTimeout(endPrint,3000)}catch(e){endPrint();say("Impression indisponible ici : utilisez « Copier le texte ».")}});
+$("copy").addEventListener("click",function(){
+ var t=toText();
+ function fb(){try{var a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();var r=document.execCommand("copy");document.body.removeChild(a);say(r?"Texte copié.":"Copie impossible dans ce contexte.")}catch(e){say("Copie impossible dans ce contexte.")}}
+ try{navigator.clipboard.writeText(t).then(function(){say("Texte copié.")},fb)}catch(e){fb()}
+});
+load();build();
+</script>
+</body>
+</html>
